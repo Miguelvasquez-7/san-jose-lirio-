@@ -1,0 +1,595 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url('imagen\ de\ fondo\ san\ jo');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+#overlay-privacidad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aviso-privacidad {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Efecto parallax */
+.parallax {
+    background-image: url('caserio\ sasn\ jose\ .jpg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+.unique-slider-container {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.unique-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.unique-slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.unique-slider img {
+    width: 100%;
+    height: 800px;
+    display: block;
+}
+
+.unique-prev, .unique-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.unique-prev {
+    left: 0;
+}
+
+.unique-next {
+    right: 0;
+}
+
+
+
+
+
+
+/* Estilo base para la galería */
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Estilo para cada video en la galería */
+.video-item {
+    flex: 1 1 300px; /* Ancho mínimo de 300px, y adaptable */
+    max-width: 400px; /* Ancho máximo de 400px */
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para cada video */
+.video-item:hover {
+    transform: scale(1.05); /* Ampliar un poco al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+/* Estilo para el contenedor del video */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+
+.parallax .content {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos para la galería */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 40px 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effects */
+.hover-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.hover-zoom:hover img {
+    transform: scale(1.2);
+}
+
+.hover-rotate img {
+    transition: transform 0.5s ease;
+}
+
+.hover-rotate:hover img {
+    transform: rotate(15deg);
+}
+
+.hover-grayscale img {
+    transition: filter 0.5s ease;
+}
+
+.hover-grayscale:hover img {
+    filter: grayscale(100%);
+}
+
+.hover-blur img {
+    transition: filter 0.5s ease;
+}
+
+.hover-blur:hover img {
+    filter: blur(5px);
+}
+
+.hover-flip img {
+    transition: transform 0.5s ease;
+}
+
+.hover-flip:hover img {
+    transform: rotateY(180deg);
+}
+
+.hover-scale img {
+    transition: transform 0.5s ease;
+}
+
+.hover-scale:hover img {
+    transform: scale(1.1);
+}
+
+
+
+/* Estilos para noticias */
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.news-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Estilos para el slider de eventos */
+.event-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-slide {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.event-slider .event-slide {
+    animation: slide 30s infinite;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+
+/* Estilos generales del contenedor */
+.contact-section {
+    background: linear-gradient(135deg, #f3f4f6, #dbe1e8); /* Fondo degradado */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    margin-top: 50px;
+}
+
+/* Título de la sección */
+.contact-section h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Descripción */
+.contact-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6; /* Mejorar la legibilidad */
+}
+
+/* Botón de contacto */
+.cta-button {
+    display: inline-block;
+    background-color: #007bff; /* Color azul */
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid transparent; /* Borde interno */
+}
+
+/* Cambio de color del botón al pasar el mouse */
+.cta-button:hover {
+    background-color: #0056b3; /* Color azul oscuro */
+    transform: scale(1.05); /* Aumento de tamaño al hacer hover */
+    border: 2px solid #0056b3; /* Borde al hacer hover */
+}
+
+/* Adaptación para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px;
+        top: 10%;
+        max-width: 90%;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+/* Estilos para el footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin-top: 55vh;
+}.hover-grayscale img {
+    transition: filter 0.5s ease;
+}
+
+.hover-grayscale:hover img {
+    filter: grayscale(100%);
+}
+
+/* Videos */
+.videos {
+    padding: 80px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px auto;
+}
+
+.video-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Contacto */
+.contact {
+    padding: 80px 20px;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 40px;
+    font-size: 3em;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e55347;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p:hover{
+    background-color: aqua;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ff6347;
+}
+
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor-footer {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: space-between;
+}
+
+.letra-web a {
+    font-size: 14px;
+    color: #337ab7; /* Azul */
+    text-decoration: none;
+}
+
+.logo-facebook,
+.logo-whatsapp,
+.logo-twitter,
+.logo-youtube {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.logo-facebook:hover,
+.logo-whatsapp:hover,
+.logo-twitter:hover,
+.logo-youtube:hover {
+    transform: scale(1.1);
+}
+
+.derechos-reservados a {
+    font-size: 14px;
+    color: #337ab7; /* Azul */
+    text-decoration: none;
+
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .contenedor-footer {
+        flex-direction: column;
+    }
+
+    .redes-sociales {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-facebook,
+    .logo-whatsapp,
+    .logo-twitter,
+    .logo-youtube {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .derechos-reservados {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
